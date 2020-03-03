@@ -1,11 +1,12 @@
 function buildOutput() {
   let template = document.getElementById("template-input").value;
   let placeholder = template.match(/^.*?(\d+).*$/)[1];
-  let repeat = document.getElementById("repeat-input").value;
+  let repeat = parseInt(document.getElementById("repeat-input").value);
+  let start = parseInt(document.getElementById("start-input").value);
   let content = "";
   for (let n = 0; n < repeat; n++) {
     let padding = new Array(placeholder.length + 1).join('0');
-    let replacement = (padding + (n + 1)).slice(-padding.length);
+    let replacement = (padding + (n + start)).slice(-padding.length);
     content += template.replace(new RegExp(placeholder, 'g'), replacement) + "\n"
   }
   let area = document.getElementById("output-area");

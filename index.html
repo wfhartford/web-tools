@@ -34,11 +34,23 @@
 </ul>
 
 <form>
+  <table>
+    <tr>
+      <th><label for="template-input">Template</label></th>
+      <td><input type="text" id="template-input" size="70"></td>
+    </tr>
+    <tr>
+      <th><label for="repeat-input">Count</label></th>
+      <td><input type="text" id="repeat-input" value="42" size="5"></td>
+    </tr>
+    <tr>
+      <th><label for="start-input">Start</label></th>
+      <td><input type="text" id="start-input" value="1" size="5"></td>
+    </tr>
+  </table>
   <div>
-    <input type="text" id="template-input" size="50">
-    <input type="text" id="repeat-input" value="42" size="5">
     <input type="button" onclick="buildOutput()" value="Go">
-    <input type="button" onclick="clearOutput()" value="Clear">
+    <button type="reset" value="Clear">Clear</button>
     <input type="button" onclick="copyOutput()" value="Copy">
   </div>
   <div>
